@@ -1,0 +1,38 @@
+tutorial completo djangogirls adaptado
+
+python3 -m venv myenv
+
+. myenv/bin/activate
+
+pip install django==1.8.5
+
+django-admin startproject meusite .
+
+{modifica algumas configs no settings.py dentro do dir meusite}
+
+python manage.py migrate
+
+python manage.py startapp flora
+
+{editar arquivo models.py dentro de flora}
+
+python manage.py makemigrations flora
+
+python manage.py migrate flora
+
+{editar o admin.py dentro de flora}
+
+python manage.py createsuperuser
+
+{deploy no python anywhere, instruções a seguir}
+
+git init
+git config user.name "fabiula"
+git config user.email fabiula.arantes@gmail.com
+git status
+add --all .
+git commit -m "My Django Girls app, first commit"
+git remote add origin https://github.com/arantesfm/my-first-blog.git
+git push -u origin master
+git clone https://github.com/arantesfm/my-first-blog.git
+tree my-first-blog
